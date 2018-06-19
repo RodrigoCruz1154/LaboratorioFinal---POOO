@@ -154,6 +154,10 @@ public class Consulta extends JFrame {
                         return String.class;
                     case 2:
                         return String.class;
+                    case 3:
+                        return String.class;
+                    case 4:
+                        return String.class;
                     default:
                         return Boolean.class;
                 }

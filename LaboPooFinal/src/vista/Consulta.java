@@ -125,10 +125,10 @@ public class Consulta extends JFrame {
 
         numero.setBounds(10, 10, ANCHOC, ALTOC);
         raza.setBounds(10, 150, ANCHOC, ALTOC);
-        estado.setBounds(10, 200, ANCHOC, ALTOC);
         nombre.setBounds(10, 200, ANCHOC, ALTOC);
-        propietario.setBounds(10, 200, ANCHOC, ALTOC);
-        edad.setBounds(10, 200, ANCHOC, ALTOC);
+        propietario.setBounds(150, 200, ANCHOC, ALTOC);
+        edad.setBounds(10, 250, ANCHOC, ALTOC);
+        estado.setBounds(10, 300, ANCHOC, ALTOC);
         si.setBounds(10, 200, ANCHOC, ALTOC);
         no.setBounds(10, 200, ANCHOC, ALTOC);
 

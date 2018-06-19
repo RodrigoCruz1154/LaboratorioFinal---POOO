@@ -5,6 +5,8 @@
  */
 package labopoofinal;
 
+import vista.Consulta;
+
 /**
  *
  * @author LN710Q
@@ -15,6 +17,7 @@ public class LaboPooFinal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        new Consulta().setVisible(true);
     }
     
 }

@@ -78,11 +78,39 @@ public class Consulta extends JFrame{
         lblEdad = new JLabel("Edad");
         lblRaza = new JLabel("Raza");
         lblEstado = new JLabel("Estado");
+        
         lblNumero.setBounds(10, 10, ANCHOC, ALTOC);
+        lblNombrePerro.setBounds(10, 60, ANCHOC, ALTOC);
+        lblPropietario.setBounds(160, 60, ANCHOC, ALTOC);
+        lblEdad.setBounds(10, 100, ANCHOC, ALTOC);
+        lblRaza.setBounds(10, 150, ANCHOC, ALTOC);
+        lblEstado.setBounds(10, 200, ANCHOC, ALTOC);
+        
     }
 
     private void formulario() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        numero = new JTextField();
+        raza = new JComboBox();
+        estado = new JTextField();
+        si = new JRadioButton("Si", true);
+        no = new JRadioButton("No");
+        resultados = new JTable();
+        buscar = new JButton("Buscar");
+        insertar = new JButton("Insertar");
+        eliminar = new JButton("Eliminar");
+        actualizar = new JButton("Actualizar");
+        limpiar = new JButton("Limpiar");
+        
+        table = new JPanel();
+        raza.addItem("Pitbull");
+        raza.addItem("Pastor Alemán");
+        raza.addItem("Gran Danés");
+        raza.addItem("Dálmata");
+        raza.addItem("Rottweiler");
+        
+        estados = new ButtonGroup();
+        estados.add(si);
+        estados.add(no);
     }
 
     private void llenarTabla() {

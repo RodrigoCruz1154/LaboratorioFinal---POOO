@@ -181,10 +181,10 @@ public class Consulta extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 FiltroDao fd = new FiltroDao();
-                Filtro f = new Filtro(nombre.getText(), marca.getSelectedItem().toString(), Integer.parseInt(stock.getText()), true);
+                Filtro f = new Filtro(numero.getText(),Integer.parseInt(edad.getText()),nombre.getText(),propietario.getText(),raza.getSelectedItem().toString(), estado.getText(), true);
 
                 if (no.isSelected()) {
-                    f.setExistencia(false);
+                    f.isEstado(false);
                 }
                 if (fd.create(f)) {
                     JOptionPane.showMessageDialog(null, "Filtro registrado con exito.");
@@ -200,7 +200,7 @@ public class Consulta extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 FiltroDao fd = new FiltroDao();
-                if (fd.delete(codigo.getText())) {
+                if (fd.delete(numero.getText())) {
                     JOptionPane.showMessageDialog(null, "Filtro Eliminado con éxito.");
                     limpiarCampos();
                     llenarTabla();
@@ -214,16 +214,18 @@ public class Consulta extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 FiltroDao fd = new FiltroDao();
-                Filtro f = fd.read(codigo.getText());
+                Filtro f = fd.read(numero.getText());
                 if (f == null) {
                     JOptionPane.showMessageDialog(null, "El filtro buscado no se ha encontrado.");
                 } else {
 
-                    codigo.setText(f.getCodigo());
-                    marca.setSelectedItem(f.getMarca());
-                    stock.setText(Integer.toString(f.getStock()));
+                    numero.setText(f.getNum());
+                    nombre.setText(f.getNombrePerro());
+                    propietario.setText(f.getPropietario());
+                    raza.setSelectedItem(f.getRaza());
+                    edad.setText(Integer.toString(f.getEdad()));
 
-                    if (f.isExistencia()) {
+                    if (f.isEstado()) {
                         si.setSelected(true);
                     } else {
                         no.setSelected(true);

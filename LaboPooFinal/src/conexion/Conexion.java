@@ -16,6 +16,8 @@ import java.util.logging.Logger;
  * @author LN710Q
  */
 public class Conexion {
+    private String user;
+    private String pass;
     private String driver;
     private String url;
     
@@ -34,15 +36,17 @@ public class Conexion {
 
         try {
             Class.forName(this.driver);
-            cnx = (Connection) DriverManager.getConnection(this.url);
+            cnx = (Connection) DriverManager.getConnection(this.url,this.user,this.pass);
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
         private void cargarCredenciales(){
-        driver="com.mysql.jdbc.Driver";
-        url="jdbc:mysql://localhost/doglove";
+            user = "root";
+            pass = "";
+            driver = "com.mysql.jdbc.Driver";
+            url = "jdbc:mysql://localhost/doglove";
     }
     
     public Connection getCnx(){

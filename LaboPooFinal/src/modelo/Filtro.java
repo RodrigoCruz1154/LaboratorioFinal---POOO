@@ -10,6 +10,7 @@ package modelo;
  * @author LN710Q
  */
 public class Filtro {
+    private int id;
     private int num;
     private int edad;
     private String nombrePerro;
@@ -18,6 +19,14 @@ public class Filtro {
     private boolean estado;
     
     public Filtro(){}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getNum() {
         return num;
@@ -64,6 +73,30 @@ public class Filtro {
     }
 
     public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
+    public Filtro(int id, int num, int edad, String nombrePerro, String propietario, String raza, boolean estado) {
+        this.id = id;
+        this.num = num;
+        this.edad = edad;
+        this.nombrePerro = nombrePerro;
+        this.propietario = propietario;
+        this.raza = raza;
+        this.estado = estado;
+    }
+
+    public Filtro(int num, int edad, String nombrePerro, String propietario, String raza, boolean estado) {
+        this.num = num;
+        this.edad = edad;
+        this.nombrePerro = nombrePerro;
+        this.propietario = propietario;
+        this.raza = raza;
+        this.estado = estado;
+    }
+
+    public Filtro(String raza, boolean estado) {
+        this.raza = raza;
         this.estado = estado;
     }
     

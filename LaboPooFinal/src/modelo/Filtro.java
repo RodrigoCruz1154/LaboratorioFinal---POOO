@@ -11,7 +11,7 @@ package modelo;
  */
 public class Filtro {
     private int id;
-    private int num;
+    private String num;
     private int edad;
     private String nombrePerro;
     private String propietario;
@@ -28,11 +28,11 @@ public class Filtro {
         this.id = id;
     }
 
-    public int getNum() {
+    public String getNum() {
         return num;
     }
 
-    public void setNum(int num) {
+    public void setNum(String num) {
         this.num = num;
     }
 
@@ -76,7 +76,7 @@ public class Filtro {
         this.estado = estado;
     }
 
-    public Filtro(int id, int num, int edad, String nombrePerro, String propietario, String raza, boolean estado) {
+    public Filtro(int id, String num, int edad, String nombrePerro, String propietario, String raza, boolean estado) {
         this.id = id;
         this.num = num;
         this.edad = edad;
@@ -86,7 +86,7 @@ public class Filtro {
         this.estado = estado;
     }
 
-    public Filtro(int num, int edad, String nombrePerro, String propietario, String raza, boolean estado) {
+    public Filtro(String num, int edad, String nombrePerro, String propietario, String raza, boolean estado) {
         this.num = num;
         this.edad = edad;
         this.nombrePerro = nombrePerro;

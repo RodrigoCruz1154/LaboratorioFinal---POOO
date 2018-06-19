@@ -42,7 +42,7 @@ public class Conexion {
     
         private void cargarCredenciales(){
         driver="com.mysql.jdbc.Driver";
-        url="jdbc:mysql://localhost/SQL";
+        url="jdbc:mysql://localhost/doglove";
     }
     
     public Connection getCnx(){

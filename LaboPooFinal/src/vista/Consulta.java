@@ -181,10 +181,10 @@ public class Consulta extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 FiltroDao fd = new FiltroDao();
-                Filtro f = new Filtro(numero.getText(),Integer.parseInt(edad.getText()),nombre.getText(),propietario.getText(),raza.getSelectedItem().toString(), estado.getText(), true);
+                Filtro f = new Filtro(numero.getText(), Integer.parseInt(edad.getText()),nombre.getText(), propietario.getText(), raza.getActionCommand(), true);
 
                 if (no.isSelected()) {
-                    f.isEstado(false);
+                    f.setEstado(false);
                 }
                 if (fd.create(f)) {
                     JOptionPane.showMessageDialog(null, "Filtro registrado con exito.");
